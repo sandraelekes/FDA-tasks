@@ -3,6 +3,7 @@
 This repository is used for the tasks assessments given during the Fundamentals of Data Analysis module on Higher Diploma in Data Analytics course from GMIT.\
 Here I will explain how I came to the solution of given tasks, reference the sources I researched for solving the problems and list the technologies I used for creating and testing the code.
 
+***
 
 ## Task 1
 
@@ -28,8 +29,38 @@ Parameter *maxsplit* is a number which specifies how many number of times the sp
 
 Default values were used in solving the task.
 
+Next step is defining a function called *counts()* that takes that list as an input and return a dictionary.
+
+Syntax for defining a function is:
+
+``` python
+    def function_name(parameters):
+        "function docstring"
+        statement1
+        statement2
+        ...
+        return [expression]
+```
+The keyword for defining a function is *def* and it is followed by identifier, which is the name of the function, and parentheses.\
+There can be one or more parameters inside parentheses and they are usually input parameters or arguments, but it is also possible to define parameters.\
+The colon symbol *:* after parentheses starts an intended block of code.\
+First statement in the code block is *"function docstring"*. This statement is optional and it represents a string that explains the functionality of the function.\
+*Statement1* and *statement2* represent body of the function - tasks that need to be performed.\
+Statement *return* exits a function and sends control back to caller. Argument *expression* is optional and it is *None* by default, but if it is defined, it's value is also returned to the caller. [4] [5]
+
+
+Following the syntax for defining a function, function *counts()* was created.
+
+``` python
+    def counts(list):
+        dict = {i:list.count(i) for i in list}
+        return dict
+    print(counts(list))
+```
+This function takes previously defined list as an input.
+
 After watching the lecture on mapping, the idea was to solve the problem with map. After research, conclusion is that the list comprehension is simpler and easier to write and read the code.\
- Since the output in the task needs to be a dictionary, similar way to list comprehension is dictionary comprehension, which is used in the solution.  
+Since the output in the task needs to be a dictionary, dictionary comprehension is used in solution, which is similar to list comprehension.
 
 ```python
     dict = {i:list.count(i) for i in list}
@@ -40,7 +71,7 @@ After watching the lecture on mapping, the idea was to solve the problem with ma
 **Sources used for researching mapping and comprehension**
 
 * [TechBeamers. Python map().](https://www.techbeamers.com/python-map-function/)
-* [Thispointer.Python : map() function explained with examples.](https://thispointer.com/python-map-function-explained-with-examples/)
+* [Thispointer. Python : map() function explained with examples.](https://thispointer.com/python-map-function-explained-with-examples/)
 * [Stackoverflow. Map list onto a dictionary.](https://stackoverflow.com/questions/1993840/map-list-onto-dictionary)
 * [Stackoverflow. Make map return a dictionary.](https://stackoverflow.com/questions/4863406/make-map-return-a-dictionary)
 * [RealPython. Python's map(): Processing Iterables Without a Loop.](https://realpython.com/python-map-function/)
@@ -53,10 +84,13 @@ After watching the lecture on mapping, the idea was to solve the problem with ma
 
 
 ### References
-[1] [Ian McLoughlin, "Tasks 2020"](https://learnonline.gmit.ie/mod/url/view.php?id=102071) \
+[1] [Ian McLoughlin. "Tasks 2020".](https://learnonline.gmit.ie/mod/url/view.php?id=102071) \
 [2] [RealPython. Basic Input, Output, and String Formatting in Python.](https://realpython.com/python-input-output/)\
-[3] [w3schools.com. Python string split() method](https://www.w3schools.com/python/ref_string_split.asp)
+[3] [w3schools.com. Python string split() method.](https://www.w3schools.com/python/ref_string_split.asp)\
+[4] [TutorialsTeacher. Python - User-Defined Functions.](https://www.tutorialsteacher.com/python/python-user-defined-function)\
+[5] [Tutorialspoint. Python 3 - Functions.](https://www.tutorialspoint.com/python3/python_functions.htm)
 
+***
 
 
 
